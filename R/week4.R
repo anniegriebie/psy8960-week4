@@ -14,3 +14,4 @@ wide_tbl[,5:9][wide_tbl[,5:9] == 0] <- NA
 
 
 wide_tbl <- drop_na(wide_tbl, q2)
+long_tbl <- pivot_longer(wide_tbl, cols = q1:q5, names_to = "question", values_to = "response")
